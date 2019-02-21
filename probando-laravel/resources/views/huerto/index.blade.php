@@ -3,7 +3,9 @@
 @section('content')
     <h2>Huerto</h2>
     <div>
-        <nav>{{}}</nav>
+        <nav>
+            <a href="{{ action('HuertoController@reversedHortalizas')}}">Reverse</a>
+        </nav>
         <ol>
         @foreach($hortalizas as $hortaliza)
             <li>{{ $hortaliza }}</li>

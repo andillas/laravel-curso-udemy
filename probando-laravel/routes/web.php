@@ -73,4 +73,7 @@ Route::get('pruebas-blade/{p1?}', function($p1 = null){
 // --------------------------- INICIO PRUEBAS CONTROLLERS -------------------------------//
 
 Route::get('huerto', 'HuertoController@index');
+Route::get('otreuh', 'HuertoController@reversedHortalizas');
+Route::get('tomates', 'HuertoController@tomates');
+Route::get('cebollas', 'HuertoController@cebollas');
 
