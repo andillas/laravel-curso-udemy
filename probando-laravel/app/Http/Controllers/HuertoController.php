@@ -22,7 +22,7 @@ class HuertoController extends Controller
     }
     public function orderedHortalizas(){
 
-//        sort($this->arr_hortalizas);
+        sort($this->arr_hortalizas);
 
         return view('huerto.index')
             ->with('hortalizas', $this->arr_hortalizas);
