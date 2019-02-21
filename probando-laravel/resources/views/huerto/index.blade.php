@@ -4,7 +4,8 @@
     <h2>Huerto</h2>
     <div>
         <nav>
-            <a href="{{ action('HuertoController@reversedHortalizas')}}">Reverse</a>
+            <a href="{{ action('HuertoController@orderedHortalizas') }}">Ordered</a>
+            <a href="{{ action('HuertoController@reversedHortalizas') }}">Reverse</a>
         </nav>
         <ol>
         @foreach($hortalizas as $hortaliza)
