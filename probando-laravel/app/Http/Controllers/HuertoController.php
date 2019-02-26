@@ -7,8 +7,15 @@ use Illuminate\Http\Request;
 class HuertoController extends Controller
 {
     //
-    private $arr_hortalizas = ['Tomates', 'Pepinos', 'Guindillas', 'Cebollas', 'Lechugas', 'Espinacas', 'Sandías', 'Melones', 'Patatas'];
+
+    private $arr_hortalizas = [
+        'Frutas' => ['Tomates', 'Pepinos', 'Guindillas', 'Sandías', 'Melones'],
+        'Hortalizas' => ['Cebollas', 'Lechugas', 'Espinacas', 'Patatas']
+    ];
+
+    //private $arr_hortalizas = ['Tomates', 'Pepinos', 'Guindillas', 'Cebollas', 'Lechugas', 'Espinacas', 'Sandías', 'Melones', 'Patatas'];
     private $arr_frutas = ['Sandía', 'Melón', 'Aguacate', 'Tomate', 'Pepino', 'Guindilla'];
+
 
     public function index(){
 
@@ -16,17 +23,32 @@ class HuertoController extends Controller
             ->with('hortalizas', $this->arr_hortalizas);
     }
 
+    public function getFrutas(){
+        sort($this->arr_hortalizas['Frutas']);
+        return view(
+            'huerto.index',
+            ['hortalizas' => $this->arr_hortalizas['Frutas']]
+        );
+    }
+
+    public function getHortalizas(){
+        sort($this->arr_hortalizas['Hortalizas']);
+        return view('huerto.index')
+            ->with('hortalizas', $this->arr_hortalizas['Hortalizas']);
+    }
+
     public function reversedHortalizas(){
-        $reversed_hortalizas = array_reverse($this->arr_hortalizas);
+        $all = array_merge($this->arr_hortalizas['Frutas'], $this->arr_hortalizas['Hortalizas']);
+        $reversed_hortalizas = array_reverse($all);
         return view('huerto.index')
             ->with('hortalizas', $reversed_hortalizas);
     }
     public function orderedHortalizas(){
-
-        sort($this->arr_hortalizas);
+        $all = array_merge($this->arr_hortalizas['Frutas'], $this->arr_hortalizas['Hortalizas']);
+        sort($all);
 
         return view('huerto.index')
-            ->with('hortalizas', $this->arr_hortalizas);
+            ->with('hortalizas', $all);
     }
 
     public function tomates($tipo = 'Cherry Soto'){

@@ -1,0 +1,160 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.notfound .notfound-404 {
+  height: 190px;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 146px;
+  font-weight: 700;
+  margin: 0px;
+  color: #232323;
+}
+
+.notfound .notfound-404 h1>span {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-image: url('../img/emoji.png');
+  background-size: cover;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: -1;
+}
+
+.notfound h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  color: #232323;
+}
+
+.notfound p {
+  font-family: 'Montserrat', sans-serif;
+  color: #787878;
+  font-weight: 300;
+}
+
+.notfound a {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-weight: 700;
+  background-color: #f99827;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 {
+    height: 115px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 86px;
+  }
+  .notfound .notfound-404 h1>span {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+fieldset {
+  margin-top: 45px;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.botonera{
+    margin-top: 45px;
+}
+.multicolumn{
+    background-color: cornflowerblue;
+  display: block;
+  margin-left: 2px;
+  padding-left: 2em;
+
+}
+.right{
+    float: right;
+}
+/*
+https://images.unsplash.com/photo-1474314005122-3c07c4df1224
+https://images.unsplash.com/photo-1535359056830-d4badde79747
+*/
+header div.jumbotron{
+  margin-top: 10px;
+  padding-top: 100px;
+  color: #ffffff;
+  height: 200px;
+  background-image: url('https://images.unsplash.com/photo-1535359056830-d4badde79747');
+  /*background-image: url('../img/Cerveza-artesanal.jpg');*/
+  background-size: cover;
+  background-position-y: 650px;
+  border-radius: 15px;
+  -webkit-transition: 1s all;
+  transition: 3s all;
+  text-shadow: -2px -3px 2px #3d230a;
+
+}
+header h1{
+  font-size: 90px !important;
+  font-weight: 800;
+}
+.titu-seccion{
+  margin: 45px 30px 25px 7px;
+}
+legend{ padding: 0 20px; width: auto !important; border-bottom: 0 !important; }
+.fs-maltas{ margin-left: 15px; padding-left: 40px }
+.fs-lupulos{ float: right; margin-right: 18px; padding-left: 40px }
+.fs-maltas .btn{width: auto !important;}
+.fs-lupulos .btn{width: auto !important;}
+
+
