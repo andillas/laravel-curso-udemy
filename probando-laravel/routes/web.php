@@ -75,8 +75,9 @@ Route::get('pruebas-blade/{p1?}', function($p1 = null){
 Route::get('huerto', 'HuertoController@index');
 Route::get('ordenado', 'HuertoController@orderedHortalizas');
 Route::get('otreuh', 'HuertoController@reversedHortalizas');
-Route::get('tomates', 'HuertoController@tomates');
-Route::get('cebollas', 'HuertoController@cebollas');
+Route::get('tomates/{typo?}', 'HuertoController@tomates');
+Route::get('cebollas/{param?}', 'HuertoController@cebollas');
+
 
 Route::prefix('huertin')->group(function(){
     Route::get('frutas', 'HuertoController@getFrutas')->name('route_get_frutas');
@@ -117,4 +118,20 @@ Route::prefix('bbatches')->group(function(){
 
 
 
+
+// --------------------------- PRUEBAS MIDDLEWARE -------------------------------------//
+
+
+Route::get('frutas/{fruta?}', [
+    'middleware' => 'IsFruta',
+    'uses' => 'HuertoController@getFrutas'
+    ]
+)->name('rt_get_frutas');
+
+//-------------------------- PRUEBAS FORMULARIO -----------------------------------------//
+
+Route::get('formulario', function(){
+    return view('form.formu');
+})->name('rt_formulario');
+Route::post('send-formu', 'HuertoController@sendFormu')->name('rt_send_formu');
 

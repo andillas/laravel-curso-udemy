@@ -7,10 +7,15 @@ use Illuminate\Http\Request;
 class HuertoController extends Controller
 {
     //
+
     private $arr_hortalizas = [
         'Frutas' => ['Tomates', 'Pepinos', 'Guindillas', 'Sandías', 'Melones'],
         'Hortalizas' => ['Cebollas', 'Lechugas', 'Espinacas', 'Patatas']
     ];
+
+    //private $arr_hortalizas = ['Tomates', 'Pepinos', 'Guindillas', 'Cebollas', 'Lechugas', 'Espinacas', 'Sandías', 'Melones', 'Patatas'];
+    private $arr_frutas = ['Sandía', 'Melón', 'Aguacate', 'Tomate', 'Pepino', 'Guindilla'];
+
 
     public function index(){
 
@@ -46,11 +51,27 @@ class HuertoController extends Controller
             ->with('hortalizas', $all);
     }
 
-    public function tomates(){
-        return '<h2>Tomates</h2>';
+    public function tomates($tipo = 'Cherry Soto'){
+        return '<h2>Tomates ' . $tipo . '</h2>';
     }
 
-    public function cebollas(){
-        return '<h2>Cebollas</h2>';
+    public function cebollas($param = 'hh'){
+        return '<h2>Cebollas - ' . $param . '</h2>';
+    }
+
+    public function getFrutas(){
+        return view('huerto.index')
+            ->with('hortalizas', $this->arr_frutas)
+            ->with('tipo' , 'Frutas');
+    }
+
+    //---------------- PRUEBAS FORMULARIO ------------------------//
+
+    public function sendFormu(Request $request){
+        $data = $request;
+
+        return 'El nombre es : ' . $data->input('nombre') . '<br> Y la descripción es : ' . $data->input('desc');
+
+//        return view('form.formu');
     }
 }
