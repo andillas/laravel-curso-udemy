@@ -37,7 +37,14 @@ class CrudCochesController extends Controller
         return view('crud_coches.formnewcoche')->with('coche', $coche);
     }
     public function updateCocheById($id, Request $request){
-        return 'eo';
+
+        $coche = DB::table('crud_coches')->where('id', $id)->update(
+            array(
+                'marca' => $request->input('marca'),
+                'modelo' => $request->input('modelo')
+            )
+        );
+        return redirect()->route('listado_coches');
     }
     public function deleteCocheById($id){
         DB::table('crud_coches')->where('id', $id)->delete();

@@ -9,11 +9,14 @@
     @if(isset($coches) && count($coches) > 0)
         <ul>
         @foreach($coches as $coche)
-                <li><a href="{{ url('crud-coches/coche/' . $coche->id) }}">{{ $coche->marca }}{{ $coche->modelo }}</a>
-                    <span>
+                <li>
+                    <p>
+                        <a href="{{ url('crud-coches/coche/' . $coche->id) }}">{{ $coche->marca }} {{ $coche->modelo }}</a>
+                        <br>
                         <a href="{{ action('CrudCochesController@getFormUpdateCoche', ['id' => $coche->id]) }}">Editar</a>
                         <a href="{{ action('CrudCochesController@deleteCocheById', array('id' => $coche->id)) }}">Eliminar</a>
-                    </span>
+                    </p>
+
                 </li>
         @endforeach
         </ul>
