@@ -84,40 +84,36 @@ Route::prefix('huertin')->group(function(){
     Route::get('hortalizas', 'HuertoController@getHortalizas')->name('route_get_hortalizas');
 });
 
-// ----------------------------- PRUEBAS MIDDLEWARE ----------------------------------------//
+// ----------------------------- PRUEBAS BEER BATCHES ----------------------------------------//
 Route::prefix('bbatches')->group(function(){
-    Route::get('home', function (){
+    Route::get('/', function(){
         return view('beer_batches.home')->with('title', 'Home');
     })->name('rt_home');
 
-    Route::get('lote/list', function (){
-        return view('beer_batches.lote.list');
-    })->name('rt_list_lote');
+    Route::get('home', function (){
+        return redirect('/bbatches');
+    });
+
+    Route::get('lote/listado', function (){
+        return view('beer_batches.lote.listado');
+    })->name('rt_listado_lote');
 
     Route::get('lote/nuevo', function(){
-        return view('beer_batches.lote.new');
-    })->name('rt_new_lote');
+        return view('beer_batches.lote.nuevo');
+    })->name('rt_nuevo_lote');
 
-    Route::get('lupulo/list', function(){
-        return view('beer_batches.lupulo.list');
-    })->name('rt_list_lupulo');
+    Route::get('lupulo/listado', 'Bbatches\LupuloController@listLupulos')->name('rt_listado_lupulo');
+    Route::get('lupulo/nuevo', 'Bbatches\LupuloController@formNewLupulo')->name('rt_nuevo_lupulo');
 
-    Route::get('lupulo/nuevo', function(){
-        return view('beer_batches.lupulo.new');
-    })->name('rt_new_lupulo');
+    Route::get('malta/listado', function(){
+        return view('beer_batches.malta.listado');
+    })->name('rt_listado_malta');
 
-    Route::get('malta/list', function(){
-        return view('beer_batches.malta.list');
-    })->name('rt_list_malta');
+    Route::get('malta/nuevo', function(){
+        return view('beer_batches.malta.nuevo');
+    })->name('rt_nuevo_malta');
 
-    Route::get('malta/nueva', function(){
-        return view('beer_batches.malta.new');
-    })->name('rt_new_malta');
 });
-
-
-
-
 
 // --------------------------- PRUEBAS MIDDLEWARE -------------------------------------//
 
@@ -134,4 +130,18 @@ Route::get('formulario', function(){
     return view('form.formu');
 })->name('rt_formulario');
 Route::post('send-formu', 'HuertoController@sendFormu')->name('rt_send_formu');
+
+//-------------------------- PRUEBAS CRUD BÁSICO ---------------------------------------//
+
+Route::prefix('crud-coches')->group(function(){
+    Route::get('home', 'CrudCochesController@getListCoches')->name('listado_coches');
+    Route::get('coche/{id}', 'CrudCochesController@getCocheById');
+    Route::get('formulario', function(){
+       return view('crud_coches.formnewcoche');
+    })->name('form_nuevo');
+    Route::get('creacoche', 'CrudCochesController@createCoche');
+    Route::get('delete/{id}', 'CrudCochesController@deleteCocheById');
+});
+
+
 

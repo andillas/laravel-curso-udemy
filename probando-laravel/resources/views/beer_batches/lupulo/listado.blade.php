@@ -4,7 +4,7 @@
 <section class="container">
     <header>
         <h2 class="titu-seccion">Lúpulos
-                <a class="btn btn-primary right" style="" href="{{ route('rt_new_lupulo') }}">Nuevo lúpulo</a>
+                <a class="btn btn-primary right" style="" href="{{ route('rt_nuevo_lupulo') }}">Nuevo lúpulo</a>
         </h2>
 
     </header>

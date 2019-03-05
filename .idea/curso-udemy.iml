@@ -6,8 +6,14 @@
       <sourceFolder url="file://$MODULE_DIR$/probando-laravel/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/probando-laravel/vendor/hamcrest/hamcrest-php" />

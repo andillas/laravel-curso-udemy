@@ -9,7 +9,7 @@ class HuertoController extends Controller
     //
 
     private $arr_hortalizas = [
-        'Frutas' => ['Tomates', 'Pepinos', 'Guindillas', 'Sandías', 'Melones'],
+        'Frutas' => ['Tomates', 'Pepinos', 'Guindillas', 'Sandías', 'Melones', 'Aguacates', 'Limones'],
         'Hortalizas' => ['Cebollas', 'Lechugas', 'Espinacas', 'Patatas']
     ];
 
@@ -18,9 +18,9 @@ class HuertoController extends Controller
 
 
     public function index(){
-
+        $all_hortalizas = array_merge($this->arr_hortalizas['Frutas'], $this->arr_hortalizas['Hortalizas']);
         return view('huerto.index')
-            ->with('hortalizas', $this->arr_hortalizas);
+            ->with('hortalizas', $all_hortalizas);
     }
 
     public function getFrutas(){
@@ -59,7 +59,7 @@ class HuertoController extends Controller
         return '<h2>Cebollas - ' . $param . '</h2>';
     }
 
-    public function getFrutas(){
+    public function getFrutas2(){
         return view('huerto.index')
             ->with('hortalizas', $this->arr_frutas)
             ->with('tipo' , 'Frutas');

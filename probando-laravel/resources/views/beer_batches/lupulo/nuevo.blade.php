@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <button type="button" class="btn btn-default" onclick="saveLupulo(this.form)">Guardar</button>
-                <button type="button" class="btn btn-checkout" onclick="window.location.href='{{route('rt_list_lupulo')}}'">Cancelar</button>
+                <button type="button" class="btn btn-checkout" onclick="window.location.href='{{route('rt_listado_lupulo')}}'">Cancelar</button>
             </div>
         </form>
     </article>

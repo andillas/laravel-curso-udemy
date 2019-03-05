@@ -139,8 +139,8 @@ header div.jumbotron{
   background-size: cover;
   background-position-y: 650px;
   border-radius: 15px;
-  -webkit-transition: 1s all;
-  transition: 3s all;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
   text-shadow: -2px -3px 2px #3d230a;
 
 }

@@ -193,7 +193,7 @@
 
                 <div class="form-group botonera">
                     <button type="button" class="btn btn-default" onclick="saveLote(this.form)">Guardar</button>
-                    <button type="button" class="btn btn-checkout" onclick="window.location.href='{{ route('rt_list_lote') }}'">Cancelar</button>
+                    <button type="button" class="btn btn-checkout" onclick="window.location.href='{{ route('rt_listado_lote') }}'">Cancelar</button>
                 </div>
             </form>
         </article>

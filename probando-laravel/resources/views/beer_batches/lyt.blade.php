@@ -16,9 +16,9 @@
 </header>
 <nav class="container">
     <ul class="nav nav-tabs">
-        <li id="nav_lote"><a href="{{route('rt_list_lote')}}">Lotes</a></li>
-        <li id="nav_lupulo"><a href="{{route('rt_list_lupulo')}}">Lúpulos</a></li>
-        <li id="nav_malta"><a href="{{ route('rt_list_malta') }}">Maltas</a></li>
+        <li id="nav_lote"><a href="{{route('rt_listado_lote')}}">Lotes</a></li>
+        <li id="nav_lupulo"><a href="{{route('rt_listado_lupulo')}}">Lúpulos</a></li>
+        <li id="nav_malta"><a href="{{ route('rt_listado_malta') }}">Maltas</a></li>
     </ul>
 </nav>
 

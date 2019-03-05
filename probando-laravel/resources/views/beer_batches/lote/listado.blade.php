@@ -4,7 +4,7 @@
     <section class="container">
     <header>
         <h2 class="titu-seccion">Lotes
-                <a class="btn btn-primary right" href="{{ route('rt_new_lote') }}">Nuevo Lote</a>
+                <a class="btn btn-primary right" href="{{ route('rt_nuevo_lote') }}">Nuevo Lote</a>
         </h2>
 
     </header>

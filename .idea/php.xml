@@ -65,6 +65,12 @@
       <path value="$PROJECT_DIR$/probando-laravel/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/probando-laravel/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/probando-laravel/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/probando-laravel/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="PhpUnit">

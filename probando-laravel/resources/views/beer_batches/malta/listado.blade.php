@@ -4,7 +4,7 @@
 <section class="container">
     <header>
         <h2 class="titu-seccion">Maltas
-                <a class="btn btn-primary right" href="{{route('rt_new_malta')}}">Nueva Malta</a>
+                <a class="btn btn-primary right" href="{{route('rt_nuevo_malta')}}">Nueva Malta</a>
         </h2>
 
     </header>
