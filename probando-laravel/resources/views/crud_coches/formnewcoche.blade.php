@@ -1,7 +1,7 @@
 @extends('crud_coches.lyt')
 @section('titulo', isset($titulo)?$titulo:'')
 @section('contenido')
-    <form action="{{ action('CrudCochesController@createCoche') }}">
+    <form action="{{ !isset($coche) ? action('CrudCochesController@createCoche') : action('CrudCochesController@updateCocheById', ['id' => $coche->id]) }}">
         <p>
             <label>Marca</label>
             <input type="text" name="marca" value="{{ isset($coche)?$coche->marca:'' }}">

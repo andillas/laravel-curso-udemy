@@ -139,6 +139,8 @@ Route::prefix('crud-coches')->group(function(){
     Route::get('formulario', function(){
        return view('crud_coches.formnewcoche');
     })->name('form_nuevo');
+    Route::get('editar-coche/{id}', 'CrudCochesController@getFormUpdateCoche');
+    Route::get('save-coche/{id}', 'CrudCochesController@updateCocheById');
     Route::get('creacoche', 'CrudCochesController@createCoche');
     Route::get('delete/{id}', 'CrudCochesController@deleteCocheById');
 });

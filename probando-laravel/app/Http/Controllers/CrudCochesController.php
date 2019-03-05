@@ -37,7 +37,7 @@ class CrudCochesController extends Controller
         return view('crud_coches.formnewcoche')->with('coche', $coche);
     }
     public function updateCocheById($id, Request $request){
-
+        return 'eo';
     }
     public function deleteCocheById($id){
         DB::table('crud_coches')->where('id', $id)->delete();
